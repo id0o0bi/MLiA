@@ -1,11 +1,11 @@
 def count():
     fs = []
     for i in range(1, 4):
-        def prod():
+        def prod(j):
             def power():
-                return i * i
+                return j * j
             return power
-        fs.append(prod)
+        fs.append(prod(i))
     return fs
 
 f1, f2, f3 = count()
