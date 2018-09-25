@@ -2,12 +2,12 @@ import loader
 import network
 
 training_data, validation_data, test_data = loader.load_data_wrapper()
-net = network.Network([784, 20, 10])
+net = network.Network([784, 10, 10])
 
 tr_data = list(training_data)
 te_data = list(test_data)
 
-# row = tr_data[49990][0]
+# row = tr_data[49990][1]
 # j=0
 
 # print("")
@@ -22,4 +22,4 @@ te_data = list(test_data)
 # print("")
 # print("")
 # quit()
-net.SGD(tr_data, 30, 10, 3.0, test_data=te_data)
+net.SGD(tr_data, 20, 100, 3.0, test_data=te_data) 

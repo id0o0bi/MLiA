@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 im = cv2.imread('OpenCV/shark.jpg', cv2.IMREAD_GRAYSCALE)
-# im = cv2.imread('/Users/qirl/projects/MLiA/OpenCV/bug.jpg', cv2.IMREAD_COLOR)
 
 plt.imshow(im, cmap='gray', interpolation='bicubic')
 plt.xticks([]), plt.yticks([])  # to hide tick values on X and Y axis
