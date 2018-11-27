@@ -11,4 +11,4 @@ def count():
 
 f2, f3, f4 = count()
 
-print (f2(), f3(),f4())
+print (f2(), f3(), f4())

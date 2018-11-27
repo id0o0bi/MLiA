@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-#-*- coding=utf8 -*-
-
 import cv2
 import numpy
 
@@ -19,19 +16,25 @@ canny = cv2.Canny(img, 50, 150)
 #提取轮廓
 _,contours, hierarchy = cv2.findContours(canny, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 print('轮廓集合：%d 个'%len(contours))
+
 # 标记
 cv2.drawContours(img,contours,-1,(0,0,255),2)
 
-# # 标记最大区域
-# maxArea = 0
-# maxAreaIndex = -1
-# for i in range(0, len(contours)):
-# 	contour = contours[i]
-# 	area = cv2.contourArea(contour)
-# 	if area > maxArea:
-# 		maxArea = area
-# 		maxAreaIndex = i
-# cv2.drawContours(img,contours,maxAreaIndex,(0,255,0),2)
+# 标记最大区域
+maxAreas = []
+count = len(contours)
+for i in range(0, count):
+    for j in range(0, count - i - 1):
+        if (cv2.contourArea(contours[j]) > cv2.contourArea(contours[j+1])):
+            tmp = contours[j]
+            contours[j] = contours[j+1]
+            contours[j+1] = tmp
+
+# for i in range(count - 20, count):
+#     cv2.drawContours(img,contours,i,(0,255,0),2)
+
+len = cv2.contourArea
+
 cv2.namedWindow('img')
 cv2.imshow('img', img)
 cv2.waitKey(0)
