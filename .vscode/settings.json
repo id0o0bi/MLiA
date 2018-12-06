@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
-    "python.linting.pylintEnabled": false
+    "python.pythonPath": "/Users/qirl/.local/share/virtualenvs/MLiA-p8T8QXax/bin/python",
+    "python.linting.pylintEnabled": true
 }

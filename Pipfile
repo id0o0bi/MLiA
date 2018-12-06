@@ -7,8 +7,11 @@ name = "pypi"
 jieba = "*"
 xlrd = "*"
 pylint = "*"
+numpy = "*"
+tensorflow = "*"
+matplotlib = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.7"
+python_version = "3.6"
