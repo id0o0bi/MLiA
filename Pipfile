@@ -10,6 +10,9 @@ pylint = "*"
 numpy = "*"
 tensorflow = "*"
 matplotlib = "*"
+opencv-python = "*"
+opencv-contrib-python = "*"
+requests = "*"
 
 [dev-packages]
 
