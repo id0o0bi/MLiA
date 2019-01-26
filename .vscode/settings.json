@@ -1,4 +1,5 @@
 {
     "python.pythonPath": "/Users/qirl/.local/share/virtualenvs/MLiA-p8T8QXax/bin/python",
+    "python.linting.pylintArgs": ["--extension-pkg-whitelist=cv2"],
     "python.linting.pylintEnabled": true
 }
